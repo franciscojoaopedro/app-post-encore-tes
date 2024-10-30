@@ -1,4 +1,4 @@
-import { api } from "encore.dev/api";
+import { api, } from "encore.dev/api";
 import { OData } from "../interfaces/post.interface";
 import { criarPost } from "../controllers/criarPost";
 
