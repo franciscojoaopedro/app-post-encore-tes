@@ -1,4 +1,5 @@
 {
 	"id":   "api-encore-hisi",
-	"lang": "typescript"
+	"lang": "typescript",
+	
 }

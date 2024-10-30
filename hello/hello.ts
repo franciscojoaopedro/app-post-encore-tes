@@ -1,24 +1,29 @@
-import { api } from "encore.dev/api";
+import { api, RawResponse } from "encore.dev/api";
 
-// Welcome to Encore!
-// This is a simple "Hello World" project to get you started.
-//
-// To run it, execute "encore run" in your favorite shell.
 
-// ==================================================================
 
-// This is a simple REST API that responds with a personalized greeting.
-// To call it, run in your terminal:
-//
-//	curl http://localhost:4000/hello/World
-//
+
+
+
+interface Message{
+  message:string
+}
+
+const controller= async ({ name }: { name: string }) : Promise<Message>=>{
+  const msg = `Oi como vai, ${name}!`;
+ 
+  return { message: msg };
+}
 export const get = api(
-  { expose: true, method: "GET", path: "/hello/:name" },
-  async ({ name }: { name: string }): Promise<Response> => {
-    const msg = `Hello ${name}!`;
-    return { message: msg };
-  }
-);
+  { expose: true, method: "POST", path: "/nome",auth:false },
+  async ({ name }: { name: string })=> controller({name})
+  
+)
+
+
+
+
+
 
 interface Response {
   message: string;
