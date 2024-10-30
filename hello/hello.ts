@@ -10,7 +10,7 @@ interface Message{
 }
 
 const controller= async ({ name }: { name: string }) : Promise<Message>=>{
-  const msg = `Oi como vai, ${name}!`;
+  const msg = `Hello ${name}!`;
  
   return { message: msg };
 }
