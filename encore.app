@@ -11,7 +11,7 @@
             "base_image": "scratch",  
         .
             "bundle_source": false,
-            "working_dir": "./"
+            "working_dir": ""
         }
     }
 
